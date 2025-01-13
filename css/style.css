@@ -1,4 +1,4 @@
-/* Gaya Umum untuk Body */
+/* BODY */
 body {
     margin-left: 3%;
     margin-right: 3%;
@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Gaya untuk Navigasi Bar */
+/* NAVIGATION */
 nav {
     display: flex;
     font-size: 1rem;
@@ -20,19 +20,16 @@ nav {
     padding: 10px 20px;
 }
 
-/* Gaya untuk Tautan dalam Navigasi */
 nav a {
     text-decoration: none;
     color: black;
 }
 
-/* Efek Hover pada Tautan */
 nav a:hover {
     text-decoration: overline maroon;
     color: maroon;
 }
 
-/* Gaya untuk Daftar Navigasi */
 nav ul {
     display: flex;
     gap: 2rem;
@@ -42,25 +39,21 @@ nav ul {
     align-items: center;
 }
 
-/* Gaya untuk Item dalam Daftar Navigasi */
 nav li {
     display: flex;
     align-items: center;
 }
 
-/* Gaya untuk Logo */
 nav .logo img {
     height: 50px;
     width: auto;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efek Hover pada Logo */
 nav .logo img:hover {
     transform: scale(1.1);
 }
 
-/* Gaya untuk Ikon Login */
 nav ul .login-icon img {
     height: 30px;
     width: auto;
@@ -68,12 +61,11 @@ nav ul .login-icon img {
     transition: transform 0.2s ease-in-out;
 }
 
-/* Efek Hover pada Ikon Login */
 nav ul .login-icon img:hover {
     transform: scale(1.1);
 }
 
-/* Kontainer untuk Kartu */
+/* Container for Cards */
 .card-container {
     display: flex;
     gap: 20px;
@@ -82,7 +74,6 @@ nav ul .login-icon img:hover {
     align-items: center;
 }
 
-/* Gaya untuk Kartu */
 .card {
     background-color: #fff;
     border-radius: 10px;
@@ -92,22 +83,35 @@ nav ul .login-icon img:hover {
     text-align: center;
 }
 
-/* Gaya untuk Gambar dalam Header Kartu */
+.card-header {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
 .card-header img {
     max-width: 100px;
 }
 
-/* Efek Hover pada Gambar dalam Header Kartu */
 .card-header:hover img {
     transform: scale(1.1);
 }
 
-/* Gaya untuk Bagian Tubuh Kartu */
 .card-body {
     padding: 20px;
 }
 
-/* Gaya untuk Kartu Galeri */
+.card-body h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-body p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Gallery Layout */
 .gallery-cards {
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +120,6 @@ nav ul .login-icon img:hover {
     gap: 20px;
 }
 
-/* Gaya untuk Setiap Kartu Galeri */
 .gallery-card {
     background-color: #fff;
     border-radius: 5px;
@@ -125,7 +128,6 @@ nav ul .login-icon img:hover {
     height: 350px;
 }
 
-/* Gaya untuk Gambar dalam Kartu Galeri */
 .gallery-card img {
     width: 100%;
     height: 100%;
@@ -135,13 +137,12 @@ nav ul .login-icon img:hover {
     cursor: pointer;
 }
 
-/* Efek Hover pada Gambar Galeri */
 .gallery-card:hover img {
     filter: grayscale(0);
     transform: scale(1.05);
 }
 
-/* Layout Form Kontak */
+/* Contact Form Layout */
 .message-container {
     display: flex;
     flex-wrap: nowrap;
@@ -151,7 +152,7 @@ nav ul .login-icon img:hover {
     box-sizing: border-box;
 }
 
-/* Gaya untuk Form Pesan */
+/* Styling for Form */
 .message-form {
     flex: 0 0 49%;
     max-width: 49%;
@@ -162,33 +163,47 @@ nav ul .login-icon img:hover {
     box-sizing: border-box;
 }
 
-/* Gaya untuk Label pada Form */
+#answer {
+    flex: 0 0 49%;
+    max-width: 49%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Label Styling */
 .message-form label {
     display: block;
     margin-bottom: 5px;
     color: #333;
+    font-family: Helvetica;
 }
 
-/* Gaya untuk Input dan Select Box */
+/* Input and Select Box Styling */
 .message-form input,
 .message-form select {
-    width: 100%;
+    width: calc(100% - 0px);
+    max-width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
     color: #555;
+    box-sizing: border-box;
 }
 
-/* Gaya untuk Placeholder dalam Input */
-.message-form input::placeholder {
+.message-form input::placeholder,
+.message-form select option {
     color: #aaa;
 }
 
-/* Gaya untuk Tombol */
+/* Button Styling */
 .message-form button {
     width: 100%;
+    max-width: 100%;
     padding: 10px;
     background-color: #333;
     color: white;
@@ -198,91 +213,111 @@ nav ul .login-icon img:hover {
     cursor: pointer;
 }
 
-/* Efek Hover pada Tombol */
 .message-form button:hover {
     background-color: #555;
 }
 
-/* Gaya untuk Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+/* Paragraph Styling in Message Form */
+.message-form p {
+    font-family: Helvetica;
+    color: #333;
+}
+
+footer p {
     text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Gaya untuk Tautan dalam Footer */
-footer a {
-    color: white;
-    text-decoration: none;
-}
+/* RESPONSIVE STYLES FOR ALL DEVICES */
 
-/* Efek Hover pada Tautan di Footer */
-footer a:hover {
-    color: #f1f1f1;
-    text-decoration: underline;
-}
-
-/* Ikon Media Sosial di Footer */
-footer .social-icons {
-    margin-top: 10px;
-}
-
-footer .social-icons a {
-    margin: 0 10px;
-    font-size: 1.5rem;
-    color: white;
-}
-
-/* Efek Hover pada Ikon Media Sosial */
-footer .social-icons a:hover {
-    color: #f1f1f1;
-}
-
-/* Teks Copyright */
-footer .copyright {
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-/* Responsif Footer */
-@media (max-width: 768px) {
-    footer {
-        padding: 15px;
+/* Untuk layar dengan lebar maksimum 1200px (Desktop) */
+@media (max-width: 1200px) {
+    .card-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
-    footer .social-icons {
-        font-size: 1.2rem;
-    }
-}
 
-@media (max-width: 480px) {
-    footer {
-        padding: 10px;
+    .card {
+        width: 250px;
     }
-    footer .social-icons {
-        font-size: 1rem;
-    }
-}
 
-/* Gaya Responsif untuk Navigasi */
-@media (max-width: 768px) {
-    nav {
-        font-size: 0.9rem;
-    }
     nav ul {
-        flex-direction: column;
         gap: 1rem;
     }
 }
 
-@media (max-width: 480px) {
+/* Untuk layar dengan lebar maksimum 992px (Tablet) */
+@media (max-width: 992px) {
+    .card-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .message-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message-form,
+    #answer {
+        max-width: 100%;
+    }
+}
+
+/* Untuk layar dengan lebar maksimum 768px (Mobile Large) */
+@media (max-width: 768px) {
     nav {
         font-size: 0.8rem;
     }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .message-container {
+        flex-direction: column;
+    }
+
+    .message-form,
+    #answer {
+        max-width: 100%;
+    }
+}
+
+/* Untuk layar dengan lebar maksimum 480px (Mobile Small) */
+@media (max-width: 480px) {
+    .card-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        font-size: 0.75rem;
+    }
+
     nav ul {
+        flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .message-form,
+    #answer {
+        padding: 15px;
+    }
+
+    .message-form button {
+        font-size: 14px;
     }
 }
