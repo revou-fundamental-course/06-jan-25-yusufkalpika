@@ -65,6 +65,58 @@ nav ul .login-icon img:hover {
     transform: scale(1.1);
 }
 
+/* Slides */
+.sliding {
+    box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    width: auto; 
+    height: 578px;
+    overflow: hidden;
+}
+
+.slider img {
+    object-fit: contain;
+    width: auto;
+    height: 578px; 
+    display: block;
+}
+
+.slider .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 16px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    z-index: 1; 
+    transform: translateY(-50%); 
+    transition: background-color 0.3s; 
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* Container for Cards */
 .card-container {
     display: flex;

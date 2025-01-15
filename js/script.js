@@ -1,42 +1,64 @@
+// Fungsi Slides
+let slideIndex = 0;
+function moveSlide(step) {
+    let slides = document.querySelectorAll(".slider .slides img");
+    slideIndex += step;
+
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1; 
+    }
+    if (slideIndex >= slides.length) {
+        slideIndex = 0; 
+    }
+
+    let slidesContainer = document.querySelector(".slider .slides");
+    slidesContainer.style.transform = "translateX(" + (-slideIndex * 100) + "%)";
+}
+
+// Autoplay
+setInterval(() => {
+    moveSlide(1); 
+}, 3000); // 3 detik
+
 // Fungsi untuk validasi form sebelum menampilkan jawaban
 function validateForm() {
     // Validasi Nama
-    var name = document.forms["message-form"]["name"].value; // Mengambil nilai dari input nama
-    if (name == "") { // Mengecek apakah nama kosong
-        alert("Nama harus diisi."); // Menampilkan alert jika nama kosong
-        return false; // Menghentikan pengiriman form
+    var name = document.forms["message-form"]["name"].value; 
+    if (name == "") { 
+        alert("Nama harus diisi."); 
+        return false; 
     }
 
     // Validasi Email
-    var email = document.forms["message-form"]["email"].value; // Mengambil nilai dari input email
+    var email = document.forms["message-form"]["email"].value; 
     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; // Pola regex untuk validasi format email
-    if (email == "") { // Mengecek apakah email kosong
-        alert("Email harus diisi."); // Menampilkan alert jika email kosong
-        return false; // Menghentikan pengiriman form
-    } else if (!email.match(emailPattern)) { // Mengecek apakah email sesuai dengan pola regex
-        alert("Format email tidak valid."); // Menampilkan alert jika format email tidak valid
+    if (email == "") { 
+        alert("Email harus diisi."); 
+        return false; 
+    } else if (!email.match(emailPattern)) { 
+        alert("Format email tidak valid."); 
         return false; // Menghentikan pengiriman form
     }
 
     // Validasi Tanggal Lahir
-    var date = document.forms["message-form"]["date"].value; // Mengambil nilai dari input tanggal lahir
-    if (date == "") { // Mengecek apakah tanggal lahir kosong
-        alert("Tanggal Lahir harus diisi."); // Menampilkan alert jika tanggal lahir kosong
-        return false; // Menghentikan pengiriman form
+    var date = document.forms["message-form"]["date"].value; 
+    if (date == "") { 
+        alert("Tanggal Lahir harus diisi."); 
+        return false; 
     }
 
     // Validasi Jenis Kelamin
-    var gender = document.forms["message-form"]["gender"].value; // Mengambil nilai dari input jenis kelamin
-    if (gender == "") { // Mengecek apakah jenis kelamin kosong
-        alert("Jenis Kelamin harus dipilih."); // Menampilkan alert jika jenis kelamin tidak dipilih
-        return false; // Menghentikan pengiriman form
+    var gender = document.forms["message-form"]["gender"].value; 
+    if (gender == "") { 
+        alert("Jenis Kelamin harus dipilih."); 
+        return false; 
     }
 
     // Validasi Pesan
-    var message = document.forms["message-form"]["message"].value; // Mengambil nilai dari input pesan
-    if (message == "") { // Mengecek apakah pesan kosong
-        alert("Pesan harus diisi."); // Menampilkan alert jika pesan kosong
-        return false; // Menghentikan pengiriman form
+    var message = document.forms["message-form"]["message"].value; 
+    if (message == "") { 
+        alert("Pesan harus diisi."); 
+        return false; 
     }
 
     // Jika semua validasi lolos, form bisa dikirimkan
@@ -46,11 +68,11 @@ function validateForm() {
 // Fungsi untuk menampilkan jawaban setelah form disubmit
 function showAnswer() {
     // Mengambil nilai dari setiap input form
-    var name = document.forms["message-form"]["name"].value; // Nama
-    var email = document.forms["message-form"]["email"].value; // Email
-    var date = document.forms["message-form"]["date"].value; // Tanggal Lahir
-    var gender = document.forms["message-form"]["gender"].value; // Jenis Kelamin
-    var message = document.forms["message-form"]["message"].value; // Pesan
+    var name = document.forms["message-form"]["name"].value; 
+    var email = document.forms["message-form"]["email"].value; 
+    var date = document.forms["message-form"]["date"].value; 
+    var gender = document.forms["message-form"]["gender"].value; 
+    var message = document.forms["message-form"]["message"].value; 
 
     // Memeriksa kembali validasi form sebelum menampilkan jawaban
     // Validasi Nama
